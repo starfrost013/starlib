@@ -3,14 +3,10 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>Starlib.Bindings</RootNamespace>
-    <Configurations>Debug;Release;Final;Profiling</Configurations>
+    <Configurations>Debug;Release</Configurations>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Description>Lightning Native Bindings</Description>
     <Authors>Ethan, starfrost</Authors>
     <SignAssembly>False</SignAssembly>
-	<TransformOnBuild>true</TransformOnBuild>
-	<OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOutputFiles>
-	<TransformOutOfDateOnly>false</TransformOutOfDateOnly>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
@@ -25,17 +21,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>x64</PlatformTarget>
     <DefineConstants>TRACE;WINDOWS,X64</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|AnyCPU'">
-    <PlatformTarget>x64</PlatformTarget>
-    <DefineConstants>TRACE;WINDOWS,X64</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|AnyCPU'">
-    <PlatformTarget>x64</PlatformTarget>
-    <DefineConstants>TRACE;WINDOWS,X64,FINAL</DefineConstants>
-    <Optimize>True</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
