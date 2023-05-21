@@ -1,7 +1,7 @@
 ﻿using FT_Fixed = System.IntPtr;
 using FT_Pos = System.IntPtr;
 
-namespace LightningBase
+namespace Starlib.Base
 {
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct FT_GlyphSlotRec

@@ -1,6 +1,6 @@
 ﻿using FT_Pos = System.IntPtr;
 
-namespace LightningBase
+namespace Starlib.Base
 {
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct FT_Bitmap_Size

@@ -1,4 +1,4 @@
-﻿namespace LightningUtil
+﻿namespace Starlib.Utilities
 {
     /// <summary>
     /// NCExceptionSeverity

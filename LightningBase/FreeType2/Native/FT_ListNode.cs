@@ -1,4 +1,4 @@
-namespace LightningBase
+namespace Starlib.Base
 {
     /// <summary>
     /// A structure used to hold a single list element.

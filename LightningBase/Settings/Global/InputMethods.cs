@@ -1,5 +1,5 @@
 ﻿
-namespace LightningBase
+namespace Starlib.Base
 {
     /// <summary>
     /// InputMethods

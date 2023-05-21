@@ -34,9 +34,9 @@
 #endregion
 
 #region Using Statements
-using static LightningBase.Utf8Marshaling;
+using static Starlib.Base.Utf8Marshaling;
 #endregion
-namespace LightningBase
+namespace Starlib.Base
 {
     public static partial class SDL
     {

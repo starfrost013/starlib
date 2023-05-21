@@ -1,4 +1,4 @@
-namespace LightningBase
+namespace Starlib.Base
 {
     /// <summary>
     /// Helpful methods to make marshalling simpler.

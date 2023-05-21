@@ -34,7 +34,7 @@
 #endregion
 
 
-namespace LightningBase
+namespace Starlib.Base
 {
     public static partial class SDL
     {

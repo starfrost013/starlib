@@ -1,6 +1,6 @@
-﻿using static LightningUtil.MathUtil;
+﻿using static Starlib.Utilities.MathUtil;
 
-namespace LightningUtil
+namespace Starlib.Utilities
 {
     /// <summary>
     /// 2D simplex noise code

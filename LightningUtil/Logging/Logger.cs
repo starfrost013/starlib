@@ -1,5 +1,5 @@
 ﻿
-namespace LightningUtil
+namespace Starlib.Utilities
 {
     /// <summary>
     /// Logging
@@ -229,15 +229,15 @@ namespace LightningUtil
                 && !dontShowMessageBox)
             {
                 Debug.Assert(AssemblyUtils.NCLightningAssembly != null);
-                Type? lightningUtilName = AssemblyUtils.NCLightningAssembly.GetType(AssemblyUtils.LIGHTNING_UTILITIES_PRESET_NAME, false, true);
+                Type? Starlib.UtilitiesName = AssemblyUtils.NCLightningAssembly.GetType(AssemblyUtils.LIGHTNING_UTILITIES_PRESET_NAME, false, true);
 
-                if (lightningUtilName == null)
+                if (Starlib.UtilitiesName == null)
                 {
                     Log("Failed to load NCMessageBox type through reflection (ignoring)", ConsoleColor.Yellow, printMetadata, logToFile, logToConsole);
                     return;
                 }
 
-                MethodBase? msgBoxOk = lightningUtilName.GetMethod("MessageBoxOK");
+                MethodBase? msgBoxOk = Starlib.UtilitiesName.GetMethod("MessageBoxOK");
 
                 if (msgBoxOk == null)
                 {

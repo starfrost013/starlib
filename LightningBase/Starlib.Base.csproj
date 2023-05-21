@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>LightningBase</RootNamespace>
+    <RootNamespace>Starlib.Base</RootNamespace>
     <Configurations>Debug;Release;Final;Profiling</Configurations>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Description>Lightning Native Bindings</Description>
@@ -39,7 +39,7 @@
   </PropertyGroup>
 	
   <ItemGroup>
-    <ProjectReference Include="..\LightningUtil\LightningUtil.csproj" />
+    <ProjectReference Include="..\Starlib.Utilities\Starlib.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

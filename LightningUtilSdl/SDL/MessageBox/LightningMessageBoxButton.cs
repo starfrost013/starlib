@@ -1,6 +1,6 @@
-﻿using static LightningBase.SDL;
+﻿using static Starlib.Base.SDL;
 
-namespace LightningUtil
+namespace Starlib.Utilities
 {
     /// <summary>
     /// NCMessageBoxButton

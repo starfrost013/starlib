@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace LightningBase
+namespace Starlib.Base
 {
     public unsafe class FreeTypeFaceFacade
     {

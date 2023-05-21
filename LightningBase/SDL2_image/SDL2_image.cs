@@ -28,11 +28,11 @@
 #endregion
 
 #region Using Statements
-using static LightningBase.SdlMarshaling;
-using static LightningBase.Utf8Marshaling;
+using static Starlib.Base.SdlMarshaling;
+using static Starlib.Base.Utf8Marshaling;
 #endregion
 
-namespace LightningBase
+namespace Starlib.Base
 {
     public static class SDL_image
     {

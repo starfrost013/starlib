@@ -35,10 +35,10 @@
 
 #region Using Statements
 using System.Runtime.Versioning;
-using static LightningBase.Utf8Marshaling;
+using static Starlib.Base.Utf8Marshaling;
 #endregion
 
-namespace LightningBase
+namespace Starlib.Base
 {
     public static partial class SDL
     {

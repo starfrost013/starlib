@@ -1,4 +1,4 @@
-﻿namespace LightningBase
+﻿namespace Starlib.Base
 {
     /// <summary>
     /// Represents the blending modes which can be used to blit glyphs onto a surface.

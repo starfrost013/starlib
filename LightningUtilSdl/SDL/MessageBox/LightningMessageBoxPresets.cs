@@ -1,6 +1,6 @@
-﻿using LightningBase;
+﻿using Starlib.Base;
 
-namespace LightningUtil
+namespace Starlib.Utilities
 {
     /// <summary>
     /// NCMessageBoxPresets

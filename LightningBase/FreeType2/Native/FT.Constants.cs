@@ -1,4 +1,4 @@
-﻿namespace LightningBase
+﻿namespace Starlib.Base
 {
     static partial class FreeTypeApi
     {

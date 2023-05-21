@@ -1,4 +1,4 @@
-namespace LightningBase
+namespace Starlib.Base
 {
 #if __IOS__
     [Foundation.Preserve(AllMembers=true)]

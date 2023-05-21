@@ -1,4 +1,4 @@
-namespace LightningBase
+namespace Starlib.Base
 {
     /// <summary>
     /// A function used to allocate ‘size’ bytes from ‘memory’.

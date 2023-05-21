@@ -1,4 +1,4 @@
-﻿namespace LightningBase
+﻿namespace Starlib.Base
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct FT_Matrix

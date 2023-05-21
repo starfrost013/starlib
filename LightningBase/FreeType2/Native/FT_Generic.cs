@@ -1,4 +1,4 @@
-﻿namespace LightningBase
+﻿namespace Starlib.Base
 {
     [UnmanagedFunctionPointer(CallingConvention.StdCall)]
     public unsafe delegate void FT_Generic_Finalizer(nint @object);

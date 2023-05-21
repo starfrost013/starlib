@@ -1,4 +1,4 @@
-namespace LightningBase
+namespace Starlib.Base
 {
     public enum FT_StrokerBorder
     {

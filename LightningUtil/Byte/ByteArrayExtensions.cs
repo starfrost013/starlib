@@ -1,5 +1,5 @@
 ﻿
-namespace LightningUtil
+namespace Starlib.Utilities
 {
     /// <summary>
     /// ByteArrayExtensions

@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LightningUtil
+namespace Starlib.Utilities
 {
     /// <summary>
     /// StringExtensions

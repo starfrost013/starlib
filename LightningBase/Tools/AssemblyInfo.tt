@@ -5,39 +5,39 @@
 <#@ import namespace="System.Reflection" #>
 <#@ import namespace="System.Text" #>
 <#@ output extension=".cs" #>
-// This file defines the version information - generated using the AssemblyInfo.tt T4 template in LightningBase.
+// This file defines the version information - generated using the AssemblyInfo.tt T4 template in STARLIBBase.
 // Automatically generated file - do not modify
 
-[assembly: AssemblyVersion("<#= LIGHTNING_VERSION_MAJOR #>.<#= LIGHTNING_VERSION_MINOR #>.<#= LIGHTNING_VERSION_REVISION #>.<#= LIGHTNING_VERSION_BUILD #>")]
-[assembly: AssemblyFileVersion("<#= LIGHTNING_VERSION_MAJOR #>.<#= LIGHTNING_VERSION_MINOR #>.<#= LIGHTNING_VERSION_REVISION #>.<#= LIGHTNING_VERSION_BUILD #>")]
-[assembly: AssemblyInformationalVersion("<#= LIGHTNING_VERSION_EXTENDED_STRING #>")]
-[assembly: AssemblyTitle("The Lightning Game Engine")]
+[assembly: AssemblyVersion("<#= STARLIB_VERSION_MAJOR #>.<#= STARLIB_VERSION_MINOR #>.<#= STARLIB_VERSION_REVISION #>.<#= STARLIB_VERSION_BUILD #>")]
+[assembly: AssemblyFileVersion("<#= STARLIB_VERSION_MAJOR #>.<#= STARLIB_VERSION_MINOR #>.<#= STARLIB_VERSION_REVISION #>.<#= STARLIB_VERSION_BUILD #>")]
+[assembly: AssemblyInformationalVersion("<#= STARLIB_VERSION_EXTENDED_STRING #>")]
+[assembly: AssemblyTitle("StarLib")]
 
-namespace LightningBase
+namespace STARLIBBase
 {
-	public static class LightningVersion
+	public static class STARLIBVersion
 	{
-		public const int LIGHTNING_VERSION_MAJOR = <#= LIGHTNING_VERSION_MAJOR #>;
-		public const int LIGHTNING_VERSION_MINOR = <#= LIGHTNING_VERSION_MINOR #>; 
-		public const int LIGHTNING_VERSION_REVISION = <#= LIGHTNING_VERSION_REVISION #>;
-		public const int LIGHTNING_VERSION_BUILD = <#= LIGHTNING_VERSION_BUILD #>;
-		public const string LIGHTNING_VERSION_SPECIFIER = "<#= LIGHTNING_VERSION_SPECIFIER #>";
-		public const string LIGHTNING_VERSION_STRING = "<#= LIGHTNING_VERSION_STRING #>";
-		public const string LIGHTNING_VERSION_BUILD_STRING = "<#= LIGHTNING_VERSION_BUILD_STRING #>";
-		public static string LIGHTNING_VERSION_EXTENDED_STRING = "<#= LIGHTNING_VERSION_EXTENDED_STRING #>";
+		public const int STARLIB_VERSION_MAJOR = <#= STARLIB_VERSION_MAJOR #>;
+		public const int STARLIB_VERSION_MINOR = <#= STARLIB_VERSION_MINOR #>; 
+		public const int STARLIB_VERSION_REVISION = <#= STARLIB_VERSION_REVISION #>;
+		public const int STARLIB_VERSION_BUILD = <#= STARLIB_VERSION_BUILD #>;
+		public const string STARLIB_VERSION_SPECIFIER = "<#= STARLIB_VERSION_SPECIFIER #>";
+		public const string STARLIB_VERSION_STRING = "<#= STARLIB_VERSION_STRING #>";
+		public const string STARLIB_VERSION_BUILD_STRING = "<#= STARLIB_VERSION_BUILD_STRING #>";
+		public static string STARLIB_VERSION_EXTENDED_STRING = "<#= STARLIB_VERSION_EXTENDED_STRING #>";
 	}
 }
 
 <#+
 
-public static int LIGHTNING_VERSION_MAJOR = 2;
-public static int LIGHTNING_VERSION_MINOR = 0; 
-public static int LIGHTNING_VERSION_REVISION = 0;
-public static int LIGHTNING_VERSION_BUILD = (DateTime.UtcNow - new DateTime(2022, 02, 26)).Days;
+public static int STARLIB_VERSION_MAJOR = 1;
+public static int STARLIB_VERSION_MINOR = 0; 
+public static int STARLIB_VERSION_REVISION = 0;
+public static int STARLIB_VERSION_BUILD = (DateTime.UtcNow - new DateTime(2023, 05, 20)).Days;
 
-public static string LIGHTNING_VERSION_SPECIFIER = "-rc1";
-public static string LIGHTNING_VERSION_STRING = $"{LIGHTNING_VERSION_MAJOR}.{LIGHTNING_VERSION_MINOR}.{LIGHTNING_VERSION_REVISION}{LIGHTNING_VERSION_SPECIFIER}";
-public static string LIGHTNING_VERSION_BUILD_STRING = $"{LIGHTNING_VERSION_MAJOR}.{LIGHTNING_VERSION_MINOR}.{LIGHTNING_VERSION_REVISION}.{LIGHTNING_VERSION_BUILD}";
-public static string LIGHTNING_VERSION_EXTENDED_STRING = $"{LIGHTNING_VERSION_STRING} build {LIGHTNING_VERSION_BUILD}, built {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}";
+public static string STARLIB_VERSION_SPECIFIER = "-pre";
+public static string STARLIB_VERSION_STRING = $"{STARLIB_VERSION_MAJOR}.{STARLIB_VERSION_MINOR}.{STARLIB_VERSION_REVISION}{STARLIB_VERSION_SPECIFIER}";
+public static string STARLIB_VERSION_BUILD_STRING = $"{STARLIB_VERSION_MAJOR}.{STARLIB_VERSION_MINOR}.{STARLIB_VERSION_REVISION}.{STARLIB_VERSION_BUILD}";
+public static string STARLIB_VERSION_EXTENDED_STRING = $"{STARLIB_VERSION_STRING} build {STARLIB_VERSION_BUILD}, built {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}";
 
 #>

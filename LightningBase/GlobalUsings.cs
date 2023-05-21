@@ -16,7 +16,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 // Don't put any usings in individual source files, put any you need to use in here.
 
 #region Global using statements
-global using LightningUtil;
+global using Starlib.Utilities;
 global using System;
 global using System.Diagnostics;
 global using System.Diagnostics.CodeAnalysis;
@@ -31,6 +31,6 @@ global using System.Runtime.Intrinsics.Arm;
 global using System.Runtime.Versioning;
 global using System.Text;
 global using System.Security;
-global using static LightningBase.SDL;
-global using static LightningBase.SDL_mixer;
+global using static Starlib.Base.SDL;
+global using static Starlib.Base.SDL_mixer;
 #endregion

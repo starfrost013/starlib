@@ -1,4 +1,4 @@
-﻿namespace LightningBase
+﻿namespace Starlib.Base
 {
     /// <summary>
     /// Encapsulates the native FreeType2 library object.

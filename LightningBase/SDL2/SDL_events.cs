@@ -34,10 +34,10 @@
 #endregion
 
 #region Using Statements
-using static LightningBase.SdlMarshaling;
+using static Starlib.Base.SdlMarshaling;
 #endregion
 
-namespace LightningBase
+namespace Starlib.Base
 {
     public static partial class SDL
     {

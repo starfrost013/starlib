@@ -1,4 +1,4 @@
-﻿namespace LightningUtil
+﻿namespace Starlib.Utilities
 {
     /// <summary>
     /// There are no string-to-Vector2 converters in the framework,

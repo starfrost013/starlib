@@ -1,4 +1,4 @@
-namespace LightningBase
+namespace Starlib.Base
 {
     /// <summary>
     /// Provide a consistent means for using pointers as references.

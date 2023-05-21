@@ -1,4 +1,4 @@
-﻿namespace LightningUtil
+﻿namespace Starlib.Utilities
 {
     /// <summary>
     /// NCAssembly
@@ -8,12 +8,12 @@
     public static class AssemblyUtils
     {
         #region class and namespace names for NCException
-        internal static string LIGHTNING_UTILITIES_NAME = "LightningUtil.Lightning";
+        internal static string LIGHTNING_UTILITIES_NAME = "Starlib.Utilities.Lightning";
 
-        internal static string LIGHTNING_UTILITIES_PRESET_NAME = $"LightningUtil.NCMessageBoxPresets";
+        internal static string LIGHTNING_UTILITIES_PRESET_NAME = $"Starlib.Utilities.NCMessageBoxPresets";
 
         /// <summary>
-        /// LightningUtil.Lightning assembly.
+        /// Starlib.Utilities.Lightning assembly.
         /// </summary>
         internal static Assembly? NCLightningAssembly { get; private set; }
 
@@ -23,7 +23,7 @@
         {
             try
             {
-                // try and load LightningUtil.Lightning.
+                // try and load Starlib.Utilities.Lightning.
                 // this is all kludge until we get a better msgbox api
                 NCLightningAssembly = Assembly.Load(LIGHTNING_UTILITIES_NAME);
             }
