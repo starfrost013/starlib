@@ -1,6 +1,6 @@
 # Starlib.NET 
 
-Starlib.NET is a library for all of my .NET projects that provides general functionality, such as logging, noise, recursive copy, system information, some string, byte, vector, file, math, and array utility functions, SDL and Freetype (and in the future, OpenGL) bindings, and an INI file parser. It was salvaged from the ruins of the [Lightning](https://github.com/starfrost013/Lightning2) Lightning game engine project as it was one of the few parts that actually functioned correctly and then cleaned up for release. It will be improved over time and there is also intended to be a C++ version eventually for my C++ projects.
+Starlib.NET is a library for all of my .NET projects that provides general functionality, such as logging, noise, recursive copy, system information, some string, byte, vector, file, math, and array utility functions, SDL and Freetype (and in the future, OpenGL) bindings, and an INI file parser. It was salvaged from the ruins of the [Lightning](https://github.com/starfrost013/Lightning2) game engine project as it was one of the few parts that actually functioned correctly and then cleaned up for release. It will be improved over time and there is also intended to be a C++ version eventually for my C++ projects.
 
 ## Build Requirements
 
