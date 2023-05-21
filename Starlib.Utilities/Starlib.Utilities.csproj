@@ -7,8 +7,8 @@
 	<PlatformTarget>x64</PlatformTarget>
 	<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 	<Nullable>enable</Nullable>
-	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -23,5 +23,9 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="if $(ConfigurationName) == Release (&#xD;&#xA;&#xD;&#xA;)&#xD;&#xA;" />
+	</Target>
 
 </Project>

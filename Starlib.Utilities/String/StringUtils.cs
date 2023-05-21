@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Starlib.Utilities
+﻿namespace Starlib.Utilities
 {
     /// <summary>
     /// StringUtils

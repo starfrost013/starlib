@@ -9,6 +9,7 @@
     <SignAssembly>False</SignAssembly>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<Nullable>enable</Nullable>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
 	<!-- Import text templating -->
