@@ -198,14 +198,13 @@ namespace Starlib.Utilities
                 Debug.Assert(LogStream != null);
                 LogStream.Write(finalLogText);
             }
-#if !FINAL && !PROFILING // final build turns off all non-error and server console logging, profiling does it for perf
 
             Console.ForegroundColor = color;
 
             if (logToConsole) Console.Write(finalLogText);
 
             Console.ForegroundColor = ConsoleColor.White;
-#endif
+
         }
 
         public static void Log(string prefix, string information, ConsoleColor color = ConsoleColor.White, bool printMetadata = true, bool logToFile = true, bool logToConsole = true)
@@ -235,50 +234,7 @@ namespace Starlib.Utilities
 
             Log($"{exceptionSeverity}:\n{errorString}", exceptionSeverity, printMetadata, logToFile, logToConsole);
 
-            // display message box
-            if (AssemblyUtils.NCLightningExists
-                && !dontShowMessageBox)
-            {
-                Debug.Assert(AssemblyUtils.NCLightningAssembly != null);
-                Type? Starlib.UtilitiesName = AssemblyUtils.NCLightningAssembly.GetType(AssemblyUtils.LIGHTNING_UTILITIES_PRESET_NAME, false, true);
-
-                if (Starlib.UtilitiesName == null)
-                {
-                    Log("Failed to load NCMessageBox type through reflection (ignoring)", ConsoleColor.Yellow, printMetadata, logToFile, logToConsole);
-                    return;
-                }
-
-                MethodBase? msgBoxOk = Starlib.UtilitiesName.GetMethod("MessageBoxOK");
-
-                if (msgBoxOk == null)
-                {
-                    Log("Failed to display error box (ignoring)", ConsoleColor.Yellow, printMetadata, logToFile, logToConsole);
-                    return;
-                }
-
-                switch (exceptionSeverity)
-                {
-                    case LoggerSeverity.Message:
-                        msgBoxOk.Invoke(null, new object[]
-                        { "Information", errorString, SDL_MessageBoxFlags.SDL_MESSAGEBOX_INFORMATION });
-                        break;
-                    case LoggerSeverity.Warning:
-                        msgBoxOk.Invoke(null, new object[]
-                        { "Warning", errorString, SDL_MessageBoxFlags.SDL_MESSAGEBOX_WARNING });
-                        break;
-                    case LoggerSeverity.Error:
-                        msgBoxOk.Invoke(null, new object[]
-                        { "Error", errorString, SDL_MessageBoxFlags.SDL_MESSAGEBOX_ERROR });
-                        break;
-                    case LoggerSeverity.FatalError:
-                        msgBoxOk.Invoke(null, new object[]
-                            { "Fatal Error", $"A fatal error has occurred:\n\n{errorString}\n\n" +
-                                $"The Lightning Game Engine-based application you are running must exit. We are sorry for the inconvenience.",
-                                SDL_MessageBoxFlags.SDL_MESSAGEBOX_ERROR });
-                        break;
-
-                }
-            }
+            // todo: ACTUAL hardware independent msgbox code
 
             if (exceptionSeverity == LoggerSeverity.FatalError) Environment.Exit(id);
         }
@@ -309,19 +265,4 @@ namespace Starlib.Utilities
             }
         }
     }
-}
-
-/// <summary>
-/// Define this here.
-/// 
-/// This is to reduce time spent in reflection which is very slow.
-/// </summary>
-[Flags]
-internal enum SDL_MessageBoxFlags : uint
-{
-    SDL_MESSAGEBOX_ERROR = 0x00000010,
-
-    SDL_MESSAGEBOX_WARNING = 0x00000020,
-
-    SDL_MESSAGEBOX_INFORMATION = 0x00000040
 }

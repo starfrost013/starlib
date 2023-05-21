@@ -3,7 +3,7 @@
     /// <summary>
     /// SystemInfoOperatingSystem
     /// 
-    /// Defines system information (operating system). Enumerates operating systems compatible with Lightning
+    /// Defines system information (operating system). 
     /// </summary>
     public enum SystemInfoOperatingSystem
     {
@@ -123,38 +123,48 @@
         WinZinc = 25,
 
         /// <summary>
-        /// OSX 10.13 (High Sierra)
+        /// macOS 10.13 (High Sierra)
         /// </summary>
         MacOS1013 = 50,
 
         /// <summary>
-        /// OSX 10.14 (Mojave)
+        /// macOS 10.14 (Mojave)
         /// </summary>
         MacOS1014 = 51,
 
         /// <summary>
-        /// OSX 10.15 (Catalina)
+        /// macOS 10.15 (Catalina)
         /// </summary>
         MacOS1015 = 52,
 
         /// <summary>
-        /// OSX 11.0 (Big Sur)
+        /// macOS 11.0 (Big Sur)
         /// </summary>
         MacOS11 = 53,
 
         /// <summary>
-        /// OSX 12.0 (Monterey)
+        /// macOS 12.0 (Monterey)
         /// </summary>
         MacOS12 = 54,
 
         /// <summary>
-        /// OSX 13.0 (Ventura)
+        /// macOS 13.0 (Ventura)
         /// </summary>
         MacOS13 = 55,
+
+        /// <summary>
+        /// macOS 14.0 (being revealed soon)
+        /// </summary>
+        MacOS14 = 56,
 
         /// <summary>
         /// Don't bother doing Linux kernel detection until we can figure out how osversion behaves on linux
         /// </summary>
         Linux = 100,
+
+        /// <summary>
+        /// FreeBSD
+        /// </summary>
+        FreeBSD = 200,
     }
 }

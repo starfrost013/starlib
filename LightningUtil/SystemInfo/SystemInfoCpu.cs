@@ -1,11 +1,9 @@
-﻿using System.Runtime.Intrinsics.Arm;
-
-namespace Starlib.Utilities
+﻿namespace Starlib.Utilities
 {
     /// <summary>
     /// SystemInfoCPU
     /// 
-    /// Provides system information (CPU section)
+    /// Provides CPU information.
     /// </summary>
     public class SystemInfoCpu
     {
@@ -37,6 +35,11 @@ namespace Starlib.Utilities
         public SystemInfoCpuCapabilities Capabilities { get; private set; }
 
         private readonly StringBuilder StringBuilder = new StringBuilder();
+
+        public SystemInfoCpu()
+        {
+            Name = "Unidentified";
+        }
 
         [RequiresPreviewFeatures]
         /// <summary>
@@ -170,10 +173,6 @@ namespace Starlib.Utilities
             Name = Name.Trim();
 
             Logger.Log($"CPU Name: {Name}");
-            // Detect instruction sets
-
-            // only sdl can check for these
-
 
             Logger.Log("CPU Capabilities: ");
 

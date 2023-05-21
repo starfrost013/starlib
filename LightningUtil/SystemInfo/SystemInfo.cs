@@ -4,26 +4,14 @@
     /// <summary>
     /// SystemInfo
     /// 
-    /// August 7, 2022
-    /// 
     /// Defines system information.
     /// </summary>
     public static class SystemInfo
     {
         /// <summary>
-        /// Screen resolution X; loaded by the settings loader and not set by the developer.
+        /// The total amount of system RAM in KiB.
         /// </summary>
-        public static int ScreenResolutionX { get; private set; }
-
-        /// <summary>
-        /// Screen resolution X; loaded by the settings loader and not set by the developer.
-        /// </summary>
-        public static int ScreenResolutionY { get; private set; }
-
-        /// <summary>
-        /// The total amount of system RAM in MiB.
-        /// </summary>
-        public static int SystemRam { get; private set; }
+        public static long SystemRam { get; private set; }
 
         /// <summary>
         /// CPU information.
@@ -49,24 +37,8 @@
             // Initialise CPU info
             Cpu.GetInfo();
 
-            // get the resolution of the first monitor as most people have one monitor. 
-            // this is pre-window initialisation so we can't query the monitor the window is on because there's no window yet, there is no other way SDL provides this
+            long sysMemoryKiB;
 
-            if (SDL_GetCurrentDisplayMode(0, out var displayMode) != 0)
-            {
-                Logger.LogError($"Error obtaining current display mode!", 311, LoggerSeverity.FatalError);
-                return;
-            }
-
-            // store the screen resolution
-            ScreenResolutionX = displayMode.w;
-            ScreenResolutionY = displayMode.h;
-
-            Logger.Log($"Screen resolution of the primary monitor = {ScreenResolutionX}x{ScreenResolutionY}");
-
-            SystemRam = SDL_GetSystemRAM();
-
-            Logger.Log($"Total system RAM (MiB) = {SystemRam}");
 
             // detect various windows versions
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -98,6 +70,16 @@
                 // moving target so use earliest known build
                 if (OperatingSystem.IsWindowsVersionAtLeast(10, 0, 25054, 0)) CurOperatingSystem = SystemInfoOperatingSystem.WinCopper;
                 if (OperatingSystem.IsWindowsVersionAtLeast(10, 0, 25240, 0)) CurOperatingSystem = SystemInfoOperatingSystem.WinZinc;
+
+                if (!PlatformWindows.GetPhysicallyInstalledSystemMemory(out sysMemoryKiB))
+                {
+                    // can't determine memory
+                    Logger.LogError($"FAIL -- GetPhysicallyInstalledSystemMemory FAILED on win32 (error code {Marshal.GetLastWin32Error()}!)", 2000, LoggerSeverity.FatalError);
+                }
+                else
+                {
+                    SystemRam = sysMemoryKiB;
+                }
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
@@ -108,12 +90,28 @@
                 if (OperatingSystem.IsMacOSVersionAtLeast(12, 0, 0)) CurOperatingSystem = SystemInfoOperatingSystem.MacOS12;
                 if (OperatingSystem.IsMacOSVersionAtLeast(13, 0, 0)) CurOperatingSystem = SystemInfoOperatingSystem.MacOS13;
             }
-            else
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) 
             {
                 // detect all linuxes
                 CurOperatingSystem = SystemInfoOperatingSystem.Linux;
+
+                SysInfo sysinfo = new();
+
+                if (PlatformLinux.sysinfo(out sysinfo) != 0)
+                {
+                    Logger.LogError($"FAIL -- sysinfo FAILED on linux (error code {Marshal.GetLastWin32Error()}!)", 2002, LoggerSeverity.FatalError);
+                }
+                else
+                {
+                    SystemRam = sysinfo.totalram;
+                }
+            }
+            else
+            {
+                Logger.LogError($"FreeBSD or unknown unsupported platform ({RuntimeInformation.OSDescription})", 2001, LoggerSeverity.FatalError);
             }
 
+            Logger.Log($"Total system RAM (KiB) = {SystemRam}");
             Logger.Log($"Operating system = {CurOperatingSystem}");
         }
     }
