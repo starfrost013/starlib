@@ -1,7 +1,7 @@
 ﻿using FT_Fixed = System.IntPtr;
 using FT_Pos = System.IntPtr;
 
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct FT_Size_Metrics

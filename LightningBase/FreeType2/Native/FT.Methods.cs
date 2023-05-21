@@ -1,4 +1,4 @@
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
 #if __IOS__
     [Foundation.Preserve(AllMembers=true)]

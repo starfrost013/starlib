@@ -1,4 +1,4 @@
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     /// <summary>
     /// Provide a consistent means for using pointers as references.

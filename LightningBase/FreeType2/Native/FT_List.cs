@@ -1,4 +1,4 @@
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     /// <summary>
     /// An <see cref="FT_List"/> iterator function which is called during a list parse by <see cref="FT_List.Iterate"/>.

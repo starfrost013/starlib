@@ -1,5 +1,5 @@
 ﻿
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     /// <summary>
     /// Utf8Marshaling

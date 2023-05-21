@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     /// <summary>
     /// Represents an interface-agnostic facade over a FreeType2 face pointer.

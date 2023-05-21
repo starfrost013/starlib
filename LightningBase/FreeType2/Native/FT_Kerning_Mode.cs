@@ -1,4 +1,4 @@
-﻿namespace Starlib.Base
+﻿namespace Starlib.Bindings
 {
     public enum FT_Kerning_Mode
     {

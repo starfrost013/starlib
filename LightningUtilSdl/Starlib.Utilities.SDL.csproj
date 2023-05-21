@@ -19,7 +19,7 @@
 
 	
   <ItemGroup>
-    <ProjectReference Include="..\LightningBase\Starlib.Base.csproj" />
+    <ProjectReference Include="..\LightningBase\Starlib.SDL.csproj" />
     <ProjectReference Include="..\LightningUtil\Starlib.Utilities.csproj" />
   </ItemGroup>
 

@@ -31,6 +31,6 @@ global using System.Runtime.Intrinsics.Arm;
 global using System.Runtime.Versioning;
 global using System.Text;
 global using System.Security;
-global using static Starlib.Base.SDL;
-global using static Starlib.Base.SDL_mixer;
+global using static Starlib.Bindings.SDL;
+global using static Starlib.Bindings.SDL_mixer;
 #endregion

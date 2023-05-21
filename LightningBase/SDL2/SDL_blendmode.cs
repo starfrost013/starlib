@@ -36,7 +36,7 @@
 #region Using Statements
 #endregion
 
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     public static partial class SDL
     {

@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     public unsafe class FreeTypeFaceFacade
     {

@@ -1,4 +1,4 @@
-﻿namespace Starlib.Base
+﻿namespace Starlib.Bindings
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct FT_SubGlyphRec

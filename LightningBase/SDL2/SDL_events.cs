@@ -34,10 +34,10 @@
 #endregion
 
 #region Using Statements
-using static Starlib.Base.SdlMarshaling;
+using static Starlib.Bindings.SdlMarshaling;
 #endregion
 
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     public static partial class SDL
     {

@@ -1,4 +1,4 @@
-﻿namespace Starlib.Base
+﻿namespace Starlib.Bindings
 {
     /// <summary>
     /// Represents an exception thrown as a result of a FreeType2 API error.

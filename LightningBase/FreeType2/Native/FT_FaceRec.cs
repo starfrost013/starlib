@@ -1,6 +1,6 @@
 ﻿using FT_Long = System.IntPtr;
 
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct FT_FaceRec

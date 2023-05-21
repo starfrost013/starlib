@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>Starlib.Base</RootNamespace>
+    <RootNamespace>Starlib.Bindings</RootNamespace>
     <Configurations>Debug;Release;Final;Profiling</Configurations>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Description>Lightning Native Bindings</Description>
@@ -44,20 +44,5 @@
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Tools\AssemblyInfo.cs">
-      <DependentUpon>AssemblyInfo.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Tools\AssemblyInfo.tt">
-      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
-      <Generator>TextTemplatingFileGenerator</Generator>
-    </None>
   </ItemGroup>
 </Project>

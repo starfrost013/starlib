@@ -35,10 +35,10 @@
 
 #region Using Statements
 using System.Runtime.Versioning;
-using static Starlib.Base.Utf8Marshaling;
+using static Starlib.Bindings.Utf8Marshaling;
 #endregion
 
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     public static partial class SDL
     {

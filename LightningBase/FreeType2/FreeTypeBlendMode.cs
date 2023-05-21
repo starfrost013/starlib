@@ -1,4 +1,4 @@
-﻿namespace Starlib.Base
+﻿namespace Starlib.Bindings
 {
     /// <summary>
     /// Represents the blending modes which can be used to blit glyphs onto a surface.

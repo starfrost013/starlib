@@ -1,4 +1,4 @@
-namespace Starlib.Base
+namespace Starlib.Bindings
 {
     /// <summary>
     /// Helpful methods to make marshalling simpler.

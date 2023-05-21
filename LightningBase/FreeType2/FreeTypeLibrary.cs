@@ -1,4 +1,4 @@
-﻿namespace Starlib.Base
+﻿namespace Starlib.Bindings
 {
     /// <summary>
     /// Encapsulates the native FreeType2 library object.
