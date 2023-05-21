@@ -3,10 +3,8 @@
 namespace Starlib.Utilities
 {
     /// <summary>
-    /// StringExtensions
-    /// 
-    /// August 3, 2022
-    /// 
+    /// StringUtils
+    ///  
     /// String extension methods
     /// </summary>
     public static class StringUtils

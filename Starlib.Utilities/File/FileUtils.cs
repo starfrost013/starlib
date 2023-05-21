@@ -3,7 +3,7 @@
     /// <summary>
     /// FileUtils
     /// 
-    /// File utilities.
+    /// Provides file utility functions.
     /// </summary>
     public static class FileUtils
     {

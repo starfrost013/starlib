@@ -1,9 +1,9 @@
 ﻿namespace Starlib.Utilities
 {
     /// <summary>
-    /// There are no string-to-Vector2 converters in the framework,
+    /// Vector2Converter
     /// 
-    /// Converts a string to a Vector2.
+    /// Converts a string to a Vector2. This is here because there are no string to Vector2 converters in the .NET core framework
     /// </summary>
     [TypeConverter(typeof(Vector2))]
     public class Vector2Converter : TypeConverter

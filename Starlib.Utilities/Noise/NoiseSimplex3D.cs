@@ -3,7 +3,7 @@
 namespace Starlib.Utilities
 {
     /// <summary>
-    /// 3D simplex noise code
+    /// 3D simplex noise code (NoiseSimplex3D)
     /// 
     /// Based on public domain code from https://github.com/Xpktro/simplexnoise/blob/master/SimplexNoise/Noise.cs
     /// </summary>

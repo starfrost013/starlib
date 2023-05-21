@@ -31,5 +31,5 @@ global using System.Runtime.Intrinsics.X86;
 global using System.Runtime.Intrinsics.Arm;
 global using System.Runtime.Versioning;
 global using System.Text;
-
+global using System.Text.RegularExpressions;
 #endregion

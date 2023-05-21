@@ -1,6 +1,11 @@
 ﻿
 namespace Starlib.Utilities
 {
+    /// <summary>
+    /// PlatformWindows
+    /// 
+    /// INTERNAL windows specific code.
+    /// </summary>
     internal static partial class PlatformWindows
     {
         [SupportedOSPlatform("windows")]

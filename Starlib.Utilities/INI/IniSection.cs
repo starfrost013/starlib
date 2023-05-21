@@ -1,11 +1,9 @@
 ﻿namespace Starlib.Utilities
 {
     /// <summary>
-    /// NCIniFileSection
+    /// IniSection
     /// 
-    /// March 7, 2022
-    /// 
-    /// Defines an MC INI file section.
+    /// Defines an INI file section.
     /// </summary>
     public class IniSection
     {

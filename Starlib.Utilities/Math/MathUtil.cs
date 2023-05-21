@@ -2,8 +2,10 @@
 namespace Starlib.Utilities
 {
     /// <summary>
+    /// Mathutil
+    /// 
     /// Public domain code from https://github.com/Xpktro/simplexnoise/blob/master/SimplexNoise/Noise.cs
-    /// slightly modified (February 22, 2023)
+    /// slightly modified (February 22, 2023). Mostly just used for the Noise classes.
     /// </summary>
     public static class MathUtil
     {

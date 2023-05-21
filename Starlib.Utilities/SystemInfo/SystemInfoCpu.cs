@@ -1,7 +1,7 @@
 ﻿namespace Starlib.Utilities
 {
     /// <summary>
-    /// SystemInfoCPU
+    /// SystemInfoCpu
     /// 
     /// Provides CPU information.
     /// </summary>

@@ -1,5 +1,4 @@
-﻿using System.Runtime.Intrinsics.Arm;
-
+﻿
 namespace Starlib.Utilities
 {
     /// <summary>

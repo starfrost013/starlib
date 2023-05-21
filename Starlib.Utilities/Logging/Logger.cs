@@ -1,5 +1,4 @@
-﻿
-namespace Starlib.Utilities
+﻿namespace Starlib.Utilities
 {
     /// <summary>
     /// Logging

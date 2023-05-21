@@ -3,7 +3,7 @@
     /// <summary>
     /// SystemInfoOperatingSystem
     /// 
-    /// Defines system information (operating system). 
+    /// Enumerates supported operating systems
     /// </summary>
     public enum SystemInfoOperatingSystem
     {

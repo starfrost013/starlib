@@ -1,11 +1,9 @@
 ﻿namespace Starlib.Utilities
 {
     /// <summary>
-    /// NCExceptionSeverity
-    /// 
-    /// February 3, 2022
-    /// 
-    /// Defines a list of exception severities for NC2.
+    /// LoggerSeverity
+    ///  
+    /// Enumerates message severity levels for the logger.
     /// </summary>
     public enum LoggerSeverity
     {

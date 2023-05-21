@@ -3,7 +3,7 @@
     /// <summary>
     /// IniFile
     /// 
-    /// NuCore INI parser
+    /// Provides a simple INI file parser
     /// Pretty simple - simply uses the first character to determine token type
     /// 
     /// <para>Written February 2022</para>
@@ -13,6 +13,7 @@
     /// <para>Updated January 15, 2023 to add nullable support,</para>
     /// <para>Updated February 11, 2023 to fix case insensitivity consistency between different methods, and to add optional case insensitivity while searching for sections or values.</para>
     /// <para>Updated February 22, 2023 to rename Write to Save and to rename some variables, as well as removing the "NC" prefix from the classes.</para>
+    /// <para>Updated May 21, 2023 for Starlib.NET, mostly just comment cleanup</para>
     /// </summary>
     public class IniFile
     {

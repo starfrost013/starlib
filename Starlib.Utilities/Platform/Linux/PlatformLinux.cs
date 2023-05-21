@@ -1,6 +1,11 @@
 ﻿
 namespace Starlib.Utilities
 {
+    /// <summary>
+    /// PlatformLinux
+    /// 
+    /// INTERNAL linux specific code.
+    /// </summary>
     internal static partial class PlatformLinux
     {
         [SupportedOSPlatform("linux")]
