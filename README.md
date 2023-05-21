@@ -16,4 +16,7 @@ There are two projects:
 * The `Starlib.Utilities` project contains all of the general utilities (everything except the SDL).
 * The `Starlib.Bindings` project contains all of the bindings for managed code (except things used internally such as system RAM detection)
 
-You can grab both projects from NuGet as individual packages if you want to: [NUGET LINK HERE](https://google.com)
+You can grab both projects from NuGet as individual packages if you want to:
+
+* `Starlib.Bindings`: https://www.nuget.org/packages/Starlib.Bindings/1.0.0
+* `Starlib.Utilties`: https://www.nuget.org/packages/Starlib.Utilities/1.0.0
