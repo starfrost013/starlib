@@ -10,6 +10,8 @@
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
 	<!-- Import text templating -->
@@ -25,6 +27,14 @@
     <DefineConstants>TRACE;WINDOWS,X64</DefineConstants>
   </PropertyGroup>
 
+	<ItemGroup>
+		<None Include="$(SolutionDir)README.md" Pack="true" PackagePath=""></None>	
+    </ItemGroup>
+
+	<ItemGroup>
+		<None Include="$(SolutionDir)LICENSE" Pack="true" PackagePath=""></None>
+	</ItemGroup>
+	
   <ItemGroup>
     <ProjectReference Include="..\Starlib.Utilities\Starlib.Utilities.csproj" />
   </ItemGroup>

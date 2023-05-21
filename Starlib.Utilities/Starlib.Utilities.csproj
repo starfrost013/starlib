@@ -9,6 +9,8 @@
 	<Nullable>enable</Nullable>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,8 +26,12 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="if $(ConfigurationName) == Release (&#xD;&#xA;&#xD;&#xA;)&#xD;&#xA;" />
-	</Target>
+	<ItemGroup>
+		<None Include="$(SolutionDir)README.md" Pack="true" PackagePath=""></None>
+	</ItemGroup>
 
+	<ItemGroup>
+		<None Include="$(SolutionDir)LICENSE" Pack="true" PackagePath=""></None>
+	</ItemGroup>
+	
 </Project>
