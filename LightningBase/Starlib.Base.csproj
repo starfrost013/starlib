@@ -37,9 +37,9 @@
     <DefineConstants>TRACE;WINDOWS,X64,FINAL</DefineConstants>
     <Optimize>True</Optimize>
   </PropertyGroup>
-	
+
   <ItemGroup>
-    <ProjectReference Include="..\Starlib.Utilities\Starlib.Utilities.csproj" />
+    <ProjectReference Include="..\LightningUtil\Starlib.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -27,7 +27,7 @@
         /// <summary>
         /// CPU information.
         /// </summary>
-        public static SystemInfoCPU Cpu { get; private set; }
+        public static SystemInfoCpu Cpu { get; private set; }
 
         /// <summary>
         /// Operating system version information
@@ -42,7 +42,7 @@
         {
             // cannot put in static constructor as this depends on SDL being initialised.
             // Initialise CPU info
-            Cpu = new SystemInfoCPU();
+            Cpu = new SystemInfoCpu();
 
             // get the resolution of the first monitor as most people have one monitor. 
             // this is pre-window initialisation so we can't query the monitor the window is on because there's no window yet, there is no other way SDL provides this

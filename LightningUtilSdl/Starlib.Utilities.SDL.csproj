@@ -20,7 +20,7 @@
 	
   <ItemGroup>
     <ProjectReference Include="..\LightningBase\Starlib.Base.csproj" />
-    <ProjectReference Include="..\Starlib.Utilities\Starlib.Utilities.csproj" />
+    <ProjectReference Include="..\LightningUtil\Starlib.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

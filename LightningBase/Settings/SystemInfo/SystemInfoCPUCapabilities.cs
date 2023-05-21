@@ -2,9 +2,11 @@
 {
     [Flags]
     /// <summary>
-    /// SystemInfoCPUCapabilities
+    /// SystemInfoCpuCapabilities
+    /// 
+    /// Enumerates CPU capabilities.
     /// </summary>
-    public enum SystemInfoCPUCapabilities
+    public enum SystemInfoCpuCapabilities
     {
         /// <summary>
         /// x86/64: This system supports the MMX instruction set.
