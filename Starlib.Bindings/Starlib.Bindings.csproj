@@ -8,6 +8,7 @@
     <Authors>Ethan, starfrost</Authors>
     <SignAssembly>False</SignAssembly>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<Nullable>enable</Nullable>
   </PropertyGroup>
 
 	<!-- Import text templating -->
@@ -24,7 +25,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LightningUtil\Starlib.Utilities.csproj" />
+    <ProjectReference Include="..\Starlib.Utilities\Starlib.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

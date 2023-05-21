@@ -36,7 +36,7 @@ namespace Starlib.Utilities
         /// </summary>
         public LightningMessageBox()
         {
-            Buttons = new List<LightningMessageBoxButton>();
+            Buttons = new();
         }
 
         /// <summary>

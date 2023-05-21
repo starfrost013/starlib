@@ -18,6 +18,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 #region Global using statements
 global using Starlib.Utilities;
 global using System;
+global using System.Collections.Generic;
 global using System.Diagnostics;
 global using System.Diagnostics.CodeAnalysis;
 global using System.IO;
