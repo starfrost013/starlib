@@ -1,4 +1,6 @@
-﻿namespace Starlib.Bindings
+﻿using System.Runtime.Intrinsics.Arm;
+
+namespace Starlib.Utilities
 {
     /// <summary>
     /// SystemInfoCPU
@@ -40,10 +42,10 @@
         /// <summary>
         /// Acquires CPU information
         /// </summary>
-        internal SystemInfoCpu()
+        internal void GetInfo()
         {
             Logger.Log("Acquiring CPU information...");
-            Threads = SDL_GetCPUCount();
+            Threads = Environment.ProcessorCount;
             Logger.Log($"Number of hardware threads = {Threads}");
 
             // get process architecture and system architecture
@@ -131,11 +133,36 @@
                     StringBuilder.Append((char)((cpuNamePart3.Item4 >> 24) & 0xFF));
 
                     Name = StringBuilder.ToString();
+
+                    if (Sse.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE;
+                    if (Sse2.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE2;
+                    if (Sse3.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE3;
+                    if (Ssse3.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSSE3;
+                    if (Sse41.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE41;
+                    if (Sse42.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE42;
+                    if (Avx.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX;
+                    if (Avx2.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX2;
+                    if (Fma.IsSupported) Capabilities |= SystemInfoCpuCapabilities.FMA;
+                    if (AvxVnni.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVXVNNI;
+                    if (Bmi1.IsSupported) Capabilities |= SystemInfoCpuCapabilities.BMI1;
+                    if (Bmi2.IsSupported) Capabilities |= SystemInfoCpuCapabilities.BMI2;
+                    if (Lzcnt.IsSupported) Capabilities |= SystemInfoCpuCapabilities.LZCNT;
+                    if (Popcnt.IsSupported) Capabilities |= SystemInfoCpuCapabilities.POPCNT;
+                    if (Pclmulqdq.IsSupported) Capabilities |= SystemInfoCpuCapabilities.PCLMULQDQ;
+                    if (System.Runtime.Intrinsics.X86.Aes.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AES;
                 }
             }
             else
             {
                 Name = "***NOT AVAILABLE ON ARM CPUs (no CPU ID capability in .NET)***";
+
+                if (AdvSimd.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_SIMD;
+                if (Crc32.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_CRC32;
+                if (Sha1.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_SHA1;
+                if (Sha256.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_SHA256;
+                if (System.Runtime.Intrinsics.Arm.Aes.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_AES;
+                if (Dp.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_DP;
+                if (Rdm.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_RDM;
             }
 
             // filter out /0 characters (as CPUID puts C terminated strings into registers)
@@ -146,34 +173,6 @@
             // Detect instruction sets
 
             // only sdl can check for these
-            if (SDL_HasMMX() == SDL_bool.SDL_TRUE) Capabilities |= SystemInfoCpuCapabilities.MMX;
-            if (SDL_Has3DNow() == SDL_bool.SDL_TRUE) Capabilities |= SystemInfoCpuCapabilities.ThreeDNow;
-            if (SDL_HasRDTSC() == SDL_bool.SDL_TRUE) Capabilities |= SystemInfoCpuCapabilities.RDTSC;
-            if (SDL_HasAVX512F() == SDL_bool.SDL_TRUE) Capabilities |= SystemInfoCpuCapabilities.AVX512;
-#if X64
-            if (Sse.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE;
-            if (Sse2.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE2;
-            if (Sse3.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE3;
-            if (Ssse3.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSSE3;
-            if (Sse41.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE41;
-            if (Sse42.IsSupported) Capabilities |= SystemInfoCpuCapabilities.SSE42;
-            if (Avx.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX;
-            if (Avx2.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX2;
-            if (Fma.IsSupported) Capabilities |= SystemInfoCpuCapabilities.FMA;
-            if (AvxVnni.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVXVNNI;
-            if (Bmi1.IsSupported) Capabilities |= SystemInfoCpuCapabilities.BMI1;
-            if (Bmi2.IsSupported) Capabilities |= SystemInfoCpuCapabilities.BMI2;
-            if (Lzcnt.IsSupported) Capabilities |= SystemInfoCpuCapabilities.LZCNT;
-            if (Popcnt.IsSupported) Capabilities |= SystemInfoCpuCapabilities.POPCNT;
-            if (Pclmulqdq.IsSupported) Capabilities |= SystemInfoCpuCapabilities.PCLMULQDQ;
-            if (Aes.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AES;
-#endif
-
-            if (ProcessArchitecture == Architecture.Arm64)
-            {
-                if (SDL_HasNEON() == SDL_bool.SDL_TRUE) Capabilities |= SystemInfoCpuCapabilities.NEON;
-                if (SDL_HasARMSIMD() == SDL_bool.SDL_TRUE) Capabilities |= SystemInfoCpuCapabilities.ARMSIMD;
-            }
 
 
             Logger.Log("CPU Capabilities: ");

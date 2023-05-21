@@ -1,4 +1,4 @@
-﻿namespace Starlib.Bindings
+﻿namespace Starlib.Utilities
 {
     [Flags]
     /// <summary>
@@ -8,20 +8,7 @@
     /// </summary>
     public enum SystemInfoCpuCapabilities
     {
-        /// <summary>
-        /// x86/64: This system supports the MMX instruction set.
-        /// </summary>
-        MMX = 0x1,
-
-        /// <summary>
-        /// AMD (before Ryzen 1000 series): This system supports the 3DNow! instruction set.
-        /// </summary>
-        ThreeDNow = 0x2,
-
-        /// <summary>
-        /// x86/64: This system supports the RDTSC instruction set.
-        /// </summary>
-        RDTSC = 0x4,
+        // MMX, 3DNow, RDTSC: CPUs with these can't hope to run our apps
 
         /// <summary>
         /// x86/64: This system supports the SSE instruction set.
@@ -69,11 +56,6 @@
         AVX2 = 0x800,
 
         /// <summary>
-        /// x86/64: This system supports the AVX512 instruction set.
-        /// </summary>
-        AVX512 = 0x1000,
-
-        /// <summary>
         /// x86/64: This system supports the AVX512 VNNI instruction set.
         /// </summary>
         AVXVNNI = 0x2000,
@@ -109,13 +91,38 @@
         AES = 0x80000,
 
         /// <summary>
-        /// ARM32: This system supports NEON.
+        /// ARM64: This system supports ARM SIMD instructions.
         /// </summary>
-        NEON = 0x100000,
+        ARM_SIMD = 0x200000,
 
         /// <summary>
-        /// ARM32/64: This system supports ARM SIMD instructions.
+        /// ARM64: This system supports ARM CRC32 instructions.
         /// </summary>
-        ARMSIMD = 0x200000,
+        ARM_CRC32 = 0x400000,
+
+        /// <summary>
+        /// ARM64: This system supports ARM SHA1 instructions.
+        /// </summary>
+        ARM_SHA1 = 0x800000,
+
+        /// <summary>
+        /// ARM64: This system supports ARM SHA256 instructions.
+        /// </summary>
+        ARM_SHA256 = 0x1000000,
+
+        /// <summary>
+        /// ARM64: This system supports ARM AES instructions.
+        /// </summary>
+        ARM_AES = 0x2000000,
+
+        /// <summary>
+        /// ARM64: This system supports ARM dot product instructions.
+        /// </summary>
+        ARM_DP = 0x4000000,
+
+        /// <summary>
+        /// ARM64: This system supports ARM RDM product instructions.
+        /// </summary>
+        ARM_RDM = 0x8000000,
     }
 }

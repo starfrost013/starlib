@@ -1,5 +1,6 @@
-﻿namespace Starlib.Bindings
+﻿namespace Starlib.Utilities
 {
+    [RequiresPreviewFeatures]
     /// <summary>
     /// SystemInfo
     /// 
@@ -34,7 +35,11 @@
         /// </summary>
         public static SystemInfoOperatingSystem CurOperatingSystem { get; private set; }
 
-        [RequiresPreviewFeatures]
+        static SystemInfo()
+        {
+            Cpu = new SystemInfoCpu();  
+        }
+
         /// <summary>
         /// Acquires information about the engine Lightning is running on.
         /// </summary>
@@ -42,7 +47,7 @@
         {
             // cannot put in static constructor as this depends on SDL being initialised.
             // Initialise CPU info
-            Cpu = new SystemInfoCpu();
+            Cpu.GetInfo();
 
             // get the resolution of the first monitor as most people have one monitor. 
             // this is pre-window initialisation so we can't query the monitor the window is on because there's no window yet, there is no other way SDL provides this

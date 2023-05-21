@@ -27,6 +27,9 @@ global using System.Linq;
 global using System.Numerics;
 global using System.Reflection;
 global using System.Runtime.InteropServices;
+global using System.Runtime.Intrinsics.X86;
+global using System.Runtime.Intrinsics.Arm;
 global using System.Runtime.Versioning;
 global using System.Text;
+
 #endregion

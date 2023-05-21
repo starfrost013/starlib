@@ -1,4 +1,4 @@
-﻿namespace Starlib.Bindings
+﻿namespace Starlib.Utilities
 {
     /// <summary>
     /// SystemInfoOperatingSystem

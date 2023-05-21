@@ -111,6 +111,17 @@ namespace Starlib.Utilities
                 return;
             }
 
+            try
+            {
+                // figure out if we have stdout
+                _ = Process.GetCurrentProcess().StandardOutput.Peek();
+            }
+            catch
+            {
+                // no stdout
+                return;
+            }
+
             string now = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             StringBuilder stringBuilder = new();
