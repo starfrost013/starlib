@@ -1,7 +1,7 @@
 ﻿namespace Starlib.Utilities
 {
     /// <summary>
-    /// NCFile
+    /// FileUtils
     /// 
     /// File utilities.
     /// </summary>
