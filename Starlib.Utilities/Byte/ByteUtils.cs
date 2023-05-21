@@ -2,13 +2,13 @@
 namespace Starlib.Utilities
 {
     /// <summary>
-    /// ByteArrayExtensions
+    /// ByteUtils
     /// 
     /// July 26, 2022
     /// 
     /// Provides extremely fast solutions for byte array equality.
     /// </summary>
-    public static class ByteArrayExtensions
+    public static class ByteUtils
     {
         /// <summary>
         /// Extremely fast byte array comparison algorithm using unsafe code, 

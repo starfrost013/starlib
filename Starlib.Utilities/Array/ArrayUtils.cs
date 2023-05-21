@@ -1,5 +1,10 @@
 ﻿namespace Starlib.Utilities
-{
+{ 
+    /// <summary>
+    /// ArrayUtils
+    /// 
+    /// Some array utility functions
+    /// </summary>
     public static class ArrayUtils
     {
         public static byte[] Combine(byte[] array1, byte[] array2)
