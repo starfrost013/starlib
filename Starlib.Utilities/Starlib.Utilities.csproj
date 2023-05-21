@@ -5,6 +5,7 @@
     <Description>Shared utility DLL</Description>
     <Configurations>Debug;Release</Configurations>
 	<PlatformTarget>x64</PlatformTarget>
+	  <PackageVersion>1.1.0</PackageVersion>
 	<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 	<Nullable>enable</Nullable>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
