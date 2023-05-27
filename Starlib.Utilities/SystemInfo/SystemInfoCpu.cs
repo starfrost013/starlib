@@ -146,26 +146,37 @@
                     if (Avx.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX;
                     if (Avx2.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX2;
                     if (Fma.IsSupported) Capabilities |= SystemInfoCpuCapabilities.FMA;
-                    if (AvxVnni.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVXVNNI;
                     if (Bmi1.IsSupported) Capabilities |= SystemInfoCpuCapabilities.BMI1;
                     if (Bmi2.IsSupported) Capabilities |= SystemInfoCpuCapabilities.BMI2;
                     if (Lzcnt.IsSupported) Capabilities |= SystemInfoCpuCapabilities.LZCNT;
                     if (Popcnt.IsSupported) Capabilities |= SystemInfoCpuCapabilities.POPCNT;
                     if (Pclmulqdq.IsSupported) Capabilities |= SystemInfoCpuCapabilities.PCLMULQDQ;
                     if (System.Runtime.Intrinsics.X86.Aes.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AES;
+
+#if NET8_0_OR_GREATER
+                    if (Avx512F.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX512F;
+                    // just check once for these, if BW isn't supported BW-VL won't be
+                    if (Avx512F.VL.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX512VL;
+                    if (Avx512BW.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX512BW;
+                    if (Avx512CD.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX512CD;
+                    if (Avx512DQ.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX512DQ;
+                    if (Avx512Vbmi.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX512Vbmi;
+#endif
+
+                    if (AvxVnni.IsSupported) Capabilities |= SystemInfoCpuCapabilities.AVX512VNNI;
                 }
             }
             else
             {
-                Name = "***NOT AVAILABLE ON ARM CPUs (no CPU ID capability in .NET)***";
+                Name = "***NOT AVAILABLE ON ARM CPUs (no CPU ID capability in .NET for ARM)***";
 
-                if (AdvSimd.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_SIMD;
-                if (Crc32.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_CRC32;
-                if (Sha1.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_SHA1;
-                if (Sha256.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_SHA256;
-                if (System.Runtime.Intrinsics.Arm.Aes.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_AES;
-                if (Dp.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_DP;
-                if (Rdm.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARM_RDM;
+                if (AdvSimd.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARMSIMD;
+                if (Crc32.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARMCRC32;
+                if (Sha1.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARMSHA1;
+                if (Sha256.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARMSHA256;
+                if (System.Runtime.Intrinsics.Arm.Aes.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARMAES;
+                if (Dp.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARMDP;
+                if (Rdm.IsSupported) Capabilities |= SystemInfoCpuCapabilities.ARMRDM;
             }
 
             // filter out /0 characters (as CPUID puts C terminated strings into registers)
@@ -173,9 +184,7 @@
             Name = Name.Trim();
 
             Logger.Log($"CPU Name: {Name}");
-
             Logger.Log("CPU Capabilities: ");
-
             Logger.Log(Capabilities.ToString());
         }
     }
