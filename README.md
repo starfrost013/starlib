@@ -18,5 +18,5 @@ There are two projects:
 
 You can grab both projects from NuGet as individual packages if you want to:
 
-* `Starlib.Bindings`: https://www.nuget.org/packages/Starlib.Bindings/1.0.0
-* `Starlib.Utilties`: https://www.nuget.org/packages/Starlib.Utilities/1.0.0
+* `Starlib.Bindings`: https://www.nuget.org/packages/Starlib.Bindings/1.0.1
+* `Starlib.Utilties`: https://www.nuget.org/packages/Starlib.Utilities/1.0.1

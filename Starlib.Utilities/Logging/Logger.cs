@@ -108,16 +108,19 @@
                 return;
             }
 
+            // try and find stdout
+            // stupid kludge as there is no handle for console windows,
+            // and standardout.peek() is only for redirection.
             try
             {
-                // figure out if we have stdout
-                _ = Process.GetCurrentProcess().StandardOutput.Peek();
+                Console.Write("");
             }
             catch
             {
-                // no stdout
-                return;
+                // IOException if no stdout
+                return; 
             }
+            
 
             string now = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 

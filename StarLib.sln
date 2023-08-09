@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starlib.Utilities", "Starli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starlib.Bindings", "Starlib.Bindings\Starlib.Bindings.csproj", "{257D125F-0499-483C-8D37-34CE6D22BA0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starlib.Utilities.Test", "Starlib.Utilities.Test\Starlib.Utilities.Test.csproj", "{204160AA-BE61-49A6-823D-52C9500CCC0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{257D125F-0499-483C-8D37-34CE6D22BA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{257D125F-0499-483C-8D37-34CE6D22BA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{257D125F-0499-483C-8D37-34CE6D22BA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{204160AA-BE61-49A6-823D-52C9500CCC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{204160AA-BE61-49A6-823D-52C9500CCC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{204160AA-BE61-49A6-823D-52C9500CCC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{204160AA-BE61-49A6-823D-52C9500CCC0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

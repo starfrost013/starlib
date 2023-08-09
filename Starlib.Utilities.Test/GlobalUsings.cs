@@ -1,6 +1,6 @@
 ﻿/*
-StarLib.NET Bindings
-Copyright © 2022-2023 Connor Hyde ("starfrost")
+StarLib.NET Util
+Copyright © 2021-2023 Connor Hyde ("starfrost")
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
 (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, 
@@ -16,17 +16,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 // Don't put any usings in individual source files, put any you need to use in here.
 
 #region Global using statements
-global using Starlib.Utilities;
 global using System;
-global using System.Collections.Generic;
-global using System.Diagnostics;
-global using System.Diagnostics.CodeAnalysis;
-global using System.IO;
 global using System.Reflection;
-global using System.Runtime.InteropServices;
-global using System.Runtime.Versioning;
-global using System.Text;
-global using System.Security;
-global using static Starlib.Bindings.SDL;
-global using static Starlib.Bindings.SDL_mixer;
+global using Starlib.Utilities;
 #endregion

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Link="LICENSE">
+      <PackagePath></PackagePath>
+      <Pack>true</Pack>
+    </None>
+    <None Include="..\README.md" Link="README.md">
+      <PackagePath></PackagePath>
+      <Pack>true</Pack>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Starlib.Utilities\Starlib.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
