@@ -7,7 +7,7 @@ namespace Starlib.Utilities
     /// 
     /// Enumerates logging channels.
     /// </summary>
-    internal enum LoggerChannel2
+    public enum LoggerChannel2
     {
         Message = 0x1,
 

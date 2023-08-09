@@ -7,7 +7,7 @@ namespace Starlib.Utilities
     /// Enumerates logging destinations
     /// </summary>
     [Flags]
-    internal enum LoggerDestination2
+    public enum LoggerDestination2
     {
         Console = 0x1,
 

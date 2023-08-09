@@ -85,11 +85,9 @@
 
             switch (severity)
             {
-#if !FINAL
                 case LoggerSeverity.Message:
                     Log(information, ConsoleColor.White, printMetadata, logToFile, logToConsole);
                     return;
-#endif
                 case LoggerSeverity.Warning:
                     Log(information, ConsoleColor.Yellow, printMetadata, logToFile, logToConsole);
                     return;
